@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+html, body{
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #fafafa;
+}
+
+html{
+  font-size: 10px;
+}
+
+/* ------------------------------ */
+
+header{
+  display: grid;
+  grid-template-columns: 1fr calc(7.5rem * 2);
+  gap: 0;
+
+  width: 100%;
+  height: 5rem;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #E6CFFA;
+}
+
+header h1{
+  display: block;
+
+  width: calc(100% - 2.5rem * 2);
+  height: 100%;
+
+  margin: 0;
+  padding: 0 2.5rem;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 600;
+  font-size: 1.75rem;
+
+  line-height: 5rem;
+  text-align: left;
+}
+
+header nav{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+  
+  margin: 0;
+  padding: 0;
+}
+
+header nav a{
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 1rem;
+
+  line-height: 5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* ------------------------------ */
+
+#openModal{
+  display: block;
+
+  width: auto;
+  height: 5rem;
+
+  margin: 1.5rem auto;
+  padding: 0 2rem;
+
+  border: none;
+  border-radius: 2.5rem;
+
+  background-color: #FFCCF1;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  line-height: 5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ------------------------------ */
+
+dialog{
+  /* display: block; */
+
+  width: min(80%, 30rem);
+  max-height: 50rem;
+
+  margin: auto;
+  padding: 2rem;
+
+  border: #cccccc 2px solid;
+  border-radius: 1rem;
+
+  background-color: #fafafa;
+}
+
+dialog h3{
+  display: block;
+
+  width: 100%;
+  height: 2rem;
+
+  margin: 1rem 0 2rem 0;
+  padding: 0;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 1.75rem;
+
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+dialog #dataSelectContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto 2rem auto;
+  padding: 0;
+}
+
+dialog #dataSelectContainer div{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  width: calc(100% - 2rem * 2);
+  height: 5.5rem;
+
+  margin: 0 auto 0 auto;
+  padding: 0.5rem 2rem;
+
+  background-color: #dfe2fa;
+}
+
+dialog #dataSelectContainer div.active{
+  background-color: #a5b0ff;
+}
+
+.dataSelect h2{
+  display: block;
+
+  width: 100%;
+  height: 3rem;
+
+  margin: 0;
+  padding: 0;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 1.75rem;
+
+  line-height: 3rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.dataSelect p{
+  display: block;
+
+  width: 100%;
+  height: 2.5rem;
+
+  margin: 0;
+  padding: 0;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  line-height: 2.5rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+#dataLoad{
+  display: block;
+
+  width: auto;
+  height: 3rem;
+
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+
+  border: none;
+  border-radius: 1.5rem;
+
+  background-color: #FFCCF1;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  line-height: 3rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
