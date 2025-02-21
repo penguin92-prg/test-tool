@@ -125,14 +125,34 @@ function fetchTXT(url) {
   });
 }
 
+// 読み込んだTXTファイルを行ごとの配列に変換
+function parseTXT(txtText) {
+  const lines = txtText.split(/\r\n|\n/); // 改行で分割
+  return lines.filter(line => line.trim() !== ""); // 空行を除外
+}
+
 // ------------------------------
 // 初期化
 var txtData;
 function dataLoad() {
   fetchTXT(dataTXT)
     .then((txtText) => {
-      txtData = txtText;
+      txtData = parseTXT(txtText);
       console.log(txtData);
+      while (document.getElementById("main").firstChild) {
+        document.getElementById("main").removeChild(document.getElementById("main").firstChild);
+      }
+      for(var i=0; i<txtData.length; i++){
+        if(txtData[i][0] == "【"){
+          var add = document.createElement("h3");
+        }
+        else{
+          var add = document.createElement("p");
+        }
+        add.innerHTML = txtData[i];
+        document.getElementById("main").appendChild(add);
+        // document.getElementById("main").appendChild(document.createElement("br"));
+      }
     })
     .catch(error => {
       console.error(error);

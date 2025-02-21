@@ -233,6 +233,42 @@ dialog #dataSelectContainer div.active{
 }
 
 /* ------------------------------ */
+
+#main{
+  display: block;
+  
+  width: min(90%, 40rem);
+  height: auto;
+
+  margin: 2rem auto;
+  padding: 0;
+}
+
+#main p{
+  display: inline-block;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  line-height: 3rem;
+  text-align: justify;
+  text-decoration: none;
+}
+
+#main h3{
+  display: inline-block;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 1.75rem;
+
+  line-height: 3rem;
+  text-align: justify;
+  text-decoration: none;
+}
 /* ------------------------------ */
 /* ------------------------------ */
 /* ------------------------------ */
