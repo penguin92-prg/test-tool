@@ -143,15 +143,76 @@ function dataLoad() {
         document.getElementById("main").removeChild(document.getElementById("main").firstChild);
       }
       for(var i=0; i<txtData.length; i++){
+        console.log(txtData[i].slice(0, 2));
         if(txtData[i][0] == "【"){
           var add = document.createElement("h3");
+          add.innerHTML = txtData[i];
+          document.getElementById("main").appendChild(document.createElement("br"));
+          document.getElementById("main").appendChild(document.createElement("br"));
+          document.getElementById("main").appendChild(add);
+          document.getElementById("main").appendChild(document.createElement("br"));
+        }
+        else if(txtData[i].slice(0, 2).match(/\d\d/)){
+          var add = document.createElement("h2");
+          add.innerHTML = txtData[i];
+          document.getElementById("main").appendChild(document.createElement("br"));
+          document.getElementById("main").appendChild(document.createElement("br"));
+          document.getElementById("main").appendChild(document.createElement("br"));
+          document.getElementById("main").appendChild(document.createElement("br"));
+          document.getElementById("main").appendChild(add);
+          document.getElementById("main").appendChild(document.createElement("br"));
         }
         else{
-          var add = document.createElement("p");
+          var add = document.createElement("div");
+          var j = 0;
+          var flag = false;
+          var tmpBold = "";
+          var tmpNormal = "";
+          var addBold = document.createElement("strong");
+          var addNormal = document.createElement("span");
+          for(var j=0; j<txtData[i].length; j++){
+            if(txtData[i][j] == "$" && flag == false){
+              addNormal.innerHTML = tmpNormal;
+              add.appendChild(addNormal);
+              tmpNormal = "";
+
+              addBold = document.createElement("strong");
+              flag = true;
+              tmpBold += txtData[i][j];
+            }
+            else if(txtData[i][j] == "$" && flag == true){
+              flag = false;
+              tmpBold = tmpBold.replace("$", "");
+              addBold.innerHTML = tmpBold;
+              addBold.addEventListener("click",
+                function(){
+                  this.classList.toggle("active");
+                }
+              )
+              add.appendChild(addBold);
+              tmpBold = "";
+
+              addNormal = document.createElement("span");
+            }
+            else if(flag == true){
+              tmpBold += txtData[i][j];
+            }
+            else{
+              tmpNormal += txtData[i][j];
+            }
+          }
+          if(tmpBold != ""){
+            tmpBold = tmpBold.replace("$", "");
+            addBold.innerHTML = tmpBold;
+            add.appendChild(addBold);
+          }
+          if(tmpNormal != ""){
+            addNormal.innerHTML = tmpNormal;
+            add.appendChild(addNormal);
+          }
+          document.getElementById("main").appendChild(add);
+          document.getElementById("main").appendChild(document.createElement("br"));
         }
-        add.innerHTML = txtData[i];
-        document.getElementById("main").appendChild(add);
-        // document.getElementById("main").appendChild(document.createElement("br"));
       }
     })
     .catch(error => {

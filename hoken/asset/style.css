@@ -237,22 +237,22 @@ dialog #dataSelectContainer div.active{
 #main{
   display: block;
   
-  width: min(90%, 40rem);
+  width: min(80%, 40rem);
   height: auto;
 
   margin: 2rem auto;
   padding: 0;
 }
 
-#main p{
+#main h2{
   display: inline-block;
 
   color: #222222;
   font-family: Noto Sans JP;
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
 
-  line-height: 3rem;
+  line-height: 3.5rem;
   text-align: justify;
   text-decoration: none;
 }
@@ -263,12 +263,68 @@ dialog #dataSelectContainer div.active{
   color: #222222;
   font-family: Noto Sans JP;
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 
   line-height: 3rem;
   text-align: justify;
   text-decoration: none;
 }
+
+#main div{
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  line-height: 3rem;
+  text-align: justify;
+  text-decoration: none;
+}
+
+#main div:not(:has(strong)){
+  text-decoration: underline;
+}
+
+#main div span{
+  display: inline;
+
+  color: #222222;
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  line-height: 3rem;
+  text-align: justify;
+  text-decoration: none;
+}
+
+#main div strong{
+  display: inline;
+
+  background-color: #c92e2e;
+
+  color: #c92e2e;
+  font-family: Noto Sans JP;
+  font-weight: 680;
+  font-size: 1.5rem;
+
+  line-height: 3rem;
+  text-align: justify;
+  text-decoration: none;
+}
+
+#main div strong.active{
+  background-color: #fafafa;
+}
+
 /* ------------------------------ */
 /* ------------------------------ */
 /* ------------------------------ */
